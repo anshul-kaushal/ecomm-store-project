@@ -10,36 +10,36 @@ body {
 
 
 /* Preview each of these suggested resets before beginning your project styling */
-/*
-img {
+
+/* img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;
 } */
-/*
-ul, ol, dl {
+
+/* ul, ol, dl {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 } */
-/*
-li > ul, li > ol {
+
+/* li > ul, li > ol {
 	padding-left: 2.5em;
 } */
-/*
-input, button {
+
+/* input, button {
 	margin: 0;
 	font: inherit;
 } */
-/*
-fieldset {
+
+/* fieldset {
 	display: flex;
 	margin: 0;
 	padding: 0;
 	border: none;
 } */
-/*
-legend {
+
+/* legend {
 	padding: 0;
 	border: none;
 } */
