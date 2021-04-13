@@ -13,27 +13,33 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="logo"><img class = "logo" src="./img/logo.svg" alt="Logo for brand"><!-- Site logo --></a>
-
+      <div class = "upper-bar">
+        <div class = "logo">
+      <a href="index.html"><img src="./img/logo.svg" alt="Logo for brand"></a>
+    </div>
       <!-- Navigation menu and toggle button (non-functional) -->
-      <button type="button" class="nav-toggle">
-        <span class="material-icons">menu</span>
-      </button>
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
-          <li><a href="#">Shop</a>
+          <!-- <li><a href="#">Shop</a>
             <ul class="submenu">
               <li><a href="#">Subcategory</a></li>
               <li><a href="#">Subcategory</a></li>
               <li><a href="#">Subcategory</a></li>
             </ul>
-          </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          </li> -->
+          <li class = "hide"><a href="#">about</a></li>
+          <li class = "hide"><a href="#">contact</a></li>
+          <li>
+            <span class = "menu-dots">
+            <i class="fas fa-ellipsis-v"></i>
+          </span>
+          </li> 
         </ul>
       </nav>
+    </div>
 
       <!-- Search for a product (non-functional) -->
+      <div class = "lower-bar">
       <form class="search">
         <label>Search
           <input type="search" name="find" id="find">
@@ -49,6 +55,7 @@
         <!-- <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li> -->
         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
       </ul>
+    </div>
     </header>
 
     <main class="products">

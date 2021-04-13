@@ -1,7 +1,11 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@600&display=swap');
+*, *::before, *::after {
+	box-sizing: inherit;
+}
 html {
+    box-sizing: border-box;
 	--bg-col: #E0178E;    /* main colour */
 	--bg-col-alt: #ED1898;    /* variant */
 	--primary-on: #ffffff;     /* for text or icons */
@@ -15,4 +19,77 @@ html {
     --pad-and-gap: 1em;
     
 	/* etc, etc... */
+}
+
+body {
+    background-image: linear-gradient(var(--bg-col), var(--bg-col-two));
+}
+
+.upper-bar{
+    /* width: 100%; */
+    /* height: auto; */
+    display: flex;
+    /* border: 1px solid white; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* overflow: hidden; */
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    align-self: center;
+    /* align-self: center; */
+    /* border: 1px solid white; */
+    /* height: 150px;
+    width: 150px; */
+    /* overflow: hidden; */
+    /* margin-top: -20px;
+    margin-bottom: -20px; */
+}
+img {
+    /* display: flow-root; */
+    height: auto;
+    width: 50%;
+
+    /* height: 200px;
+    width: 200px; */
+    /* margin-top: -40px; */
+}
+.logo a {
+    /* height: 80px;
+    width: auto; */
+    /* border:1px solid black; */
+    float: left;
+    display: inline;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5em 0 0;
+    width: auto;
+    align-self: center;
+}
+.menu li {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+.menu li a {
+    text-decoration: none;
+}
+.menu-dots{
+    color: white;
+}
+.navigation{
+    /* border: 1px solid white; */
+    display: inline-block;
+}
+.hide{
+    display: none;
 }
