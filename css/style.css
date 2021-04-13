@@ -1,1 +1,18 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@600&display=swap');
+html {
+	--bg-col: #E0178E;    /* main colour */
+	--bg-col-alt: #ED1898;    /* variant */
+	--primary-on: #ffffff;     /* for text or icons */
+	--bg-col-two: #700343;
+	--bg-col-two-alt: #7D044A;
+    --secondary-on: #000000;
+    --main-col: #F1ECE6;
+    --main-col-alt: #FFF9F2;
+    --font-heading: 'Raleway', sans-serif;
+    --font-para: 'Avenir Next', 'Nunito', sans-serif;
+    --pad-and-gap: 1em;
+    
+	/* etc, etc... */
+}
