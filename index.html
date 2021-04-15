@@ -45,6 +45,7 @@
       <form class="searchbox">
         <label>Search
           <input type="search" name="find" id="find">
+          <!-- <img src="./img/search-bar.svg" alt=""> -->
         </label>
         <!-- <button type="button"><span class="material-icons">search</span></button> -->
         <button type="button"><i class="fas fa-search"></i></button>
@@ -62,12 +63,12 @@
     </header>
 
     <main class="products">
-      <header>
+      <!-- <header>
         <h1>Products</h1>
-      </header>
+      </header> -->
 
       <!-- Filtering product form -->
-      <form class="filters">
+      <!-- <form class="filters">
         <h2>Filters</h2>
 
         <div class="filter-options">
@@ -129,25 +130,37 @@
             <option value="newest">Newest releases</option>
           </select>
         </fieldset>
-      </form>
+      </form> -->
 
-      <section class="results">
-        <h2 class="subheading">Results</h2>
+      <!-- <section class="results">
+        <h2 class="subheading">Results</h2> -->
 
         <!-- Product 1 -->
         <article class="product">
-          <header>
-            <img src="img/product.jpg" alt="Product Image">
-            <h3>Product Name</h3>
-            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-            <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
-            <dl>
+          <!-- <header> -->
+            <h3 class="sub-heading">Journal</h3>
+            <img class="product-images" src="img/journal.jpg" alt="Product Image">
+            <div class="price-and-rating">
+            <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+            <data class = "price" value="39">$39.00</data>
+            <div class="rating">
+              <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span>
+          </div>
+        </div>
+            <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vero quisquam. Quaerat ut eos unde architecto praesentium incidunt esse porro repellendus cupiditate. Obcaecati aperiam minus quasi quos! Rem, maiores. Iure.</p>
+            <!-- <dl class="rating">
               <dt>Rating</dt>
               <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-            </dl>
-            <a href="#">see more</a>
-          </header>
-          <form>
+            </dl> -->
+            <!-- <a href="#">see more</a> -->
+            <a href="#">
+              <div class="learn-more">
+                <img class="learn-more-button" src="./img/learn-more.svg" alt="button">
+                <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button">
+              </div>
+            </a>
+          <!-- </header> -->
+          <!-- <form>
             <fieldset>
               <legend>Colours</legend>
               <ul>
@@ -168,11 +181,11 @@
           <footer>
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
-          </footer>
+          </footer> -->
         </article>
 
         <!-- Product 2 -->
-        <article class="product">
+        <!-- <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
@@ -206,10 +219,56 @@
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
           </footer>
-        </article>
-
+        </article> -->
+        <article class="product">
+          <!-- <header> -->
+            <h3 class="sub-heading">minimalist t-shirts</h3>
+            <img class="product-images" src="img/t-shirts.jpg" alt="Product Image">
+            <div class="price-and-rating">
+            <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+            <data class = "price" value="39">$39.00</data>
+            <div class="rating">
+              <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span>
+          </div>
+        </div>
+            <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vero quisquam. Quaerat ut eos unde architecto praesentium incidunt esse porro repellendus cupiditate. Obcaecati aperiam minus quasi quos! Rem, maiores. Iure.</p>
+            <!-- <dl class="rating">
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl> -->
+            <!-- <a href="#">see more</a> -->
+            <a href="#">
+              <div class="learn-more">
+                <img class="learn-more-button" src="./img/learn-more.svg" alt="button">
+                <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button">
+              </div>
+            </a>
+          <!-- </header> -->
+          <!-- <form>
+            <fieldset>
+              <legend>Colours</legend>
+              <ul>
+                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Sizes</legend>
+              <ol>
+                <li><label><input type="radio" name="size" value="m"> M</label></li>
+                <li><label><input type="radio" name="size" value="l"> L</label></li>
+                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer> -->
+        </article>  
         <!-- Product 3 -->
-        <article class="product">
+        <!-- <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
@@ -243,10 +302,56 @@
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
           </footer>
+        </article> -->
+        <article class="product">
+          <!-- <header> -->
+            <h3 class="sub-heading">studio headphones</h3>
+            <img class="product-images" src="img/headphones.jpg" alt="Product Image">
+            <div class="price-and-rating">
+            <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+            <data class = "price" value="39">$39.00</data>
+            <div class="rating">
+              <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span>
+          </div>
+        </div>
+            <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vero quisquam. Quaerat ut eos unde architecto praesentium incidunt esse porro repellendus cupiditate. Obcaecati aperiam minus quasi quos! Rem, maiores. Iure.</p>
+            <!-- <dl class="rating">
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl> -->
+            <!-- <a href="#">see more</a> -->
+            <a href="#">
+              <div class="learn-more">
+                <img class="learn-more-button" src="./img/learn-more.svg" alt="button">
+                <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button">
+              </div>
+            </a>
+          <!-- </header> -->
+          <!-- <form>
+            <fieldset>
+              <legend>Colours</legend>
+              <ul>
+                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Sizes</legend>
+              <ol>
+                <li><label><input type="radio" name="size" value="m"> M</label></li>
+                <li><label><input type="radio" name="size" value="l"> L</label></li>
+                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer> -->
         </article>
-  
         <!-- Product 4 -->
-        <article class="product">
+        <!-- <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
@@ -280,10 +385,56 @@
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
           </footer>
+        </article> -->
+        <article class="product">
+          <!-- <header> -->
+            <h3 class="sub-heading">smart wallet</h3>
+            <img class="product-images" src="img/wallet.jpg" alt="Product Image">
+            <div class="price-and-rating">
+            <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+            <data class = "price" value="39">$39.00</data>
+            <div class="rating">
+              <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span>
+          </div>
+        </div>
+            <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vero quisquam. Quaerat ut eos unde architecto praesentium incidunt esse porro repellendus cupiditate. Obcaecati aperiam minus quasi quos! Rem, maiores. Iure.</p>
+            <!-- <dl class="rating">
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl> -->
+            <!-- <a href="#">see more</a> -->
+            <a href="#">
+              <div class="learn-more">
+                <img class="learn-more-button" src="./img/learn-more.svg" alt="button">
+                <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button">
+              </div>
+            </a>
+          <!-- </header> -->
+          <!-- <form>
+            <fieldset>
+              <legend>Colours</legend>
+              <ul>
+                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Sizes</legend>
+              <ol>
+                <li><label><input type="radio" name="size" value="m"> M</label></li>
+                <li><label><input type="radio" name="size" value="l"> L</label></li>
+                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer> -->
         </article>
-
         <!-- Product 5 -->
-        <article class="product">
+        <!-- <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
@@ -317,10 +468,56 @@
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
           </footer>
+        </article> -->
+        <article class="product">
+          <!-- <header> -->
+            <h3 class="sub-heading">smart wrist-band</h3>
+            <img class="product-images" src="img/band.jpg" alt="Product Image">
+            <div class="price-and-rating">
+            <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+            <data class = "price" value="39">$39.00</data>
+            <div class="rating">
+              <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span>
+          </div>
+        </div>
+            <p class="product-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, vero quisquam. Quaerat ut eos unde architecto praesentium incidunt esse porro repellendus cupiditate. Obcaecati aperiam minus quasi quos! Rem, maiores. Iure.</p>
+            <!-- <dl class="rating">
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl> -->
+            <!-- <a href="#">see more</a> -->
+            <a href="#">
+              <div class="learn-more">
+                <img class="learn-more-button" src="./img/learn-more.svg" alt="button">
+                <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button">
+              </div>
+            </a>
+          <!-- </header> -->
+          <!-- <form>
+            <fieldset>
+              <legend>Colours</legend>
+              <ul>
+                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Sizes</legend>
+              <ol>
+                <li><label><input type="radio" name="size" value="m"> M</label></li>
+                <li><label><input type="radio" name="size" value="l"> L</label></li>
+                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ol>
+            </fieldset>
+          </form>
+          <footer>
+            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>
+          </footer> -->
         </article>
-
         <!-- Product 6 -->
-        <article class="product">
+        <!-- <article class="product">
           <header>
             <img src="img/product.jpg" alt="Product Image">
             <h3>Product Name</h3>
@@ -354,10 +551,10 @@
             <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
             <button type="button"><span class="material-icons">favorite</span></button>
           </footer>
-        </article>
+        </article> -->
       </section>
 
-      <nav aria-label="Pagination" class="pagination">
+      <!-- <nav aria-label="Pagination" class="pagination">
         <p>1-6 of 23 products found</p>
         <ol class="pages">
           <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
@@ -366,7 +563,7 @@
           <li><a href="#" aria-label="Page 4">4</a></li>
           <li><a href="#" aria-label="Page 5">5</a></li>
         </ol>
-      </nav>
+      </nav> -->
     </main>
 
     <footer class="page-footer">
@@ -375,7 +572,7 @@
         <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
         <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
       </ul>
-      <nav aria-label="Legal">
+      <nav aria-label="Legal" class="footer-nav">
         <ul class="legal">
           <li><a href="#">Terms of Use</a></li>
           <li><a href="#">Privacy Policy</a></li>
