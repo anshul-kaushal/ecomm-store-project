@@ -134,6 +134,15 @@ body {
     justify-self: flex-start;
     padding-bottom: 0.5em;
 }
+/* button, input{
+    font-family: inherit;
+    background: none;
+    outline: none;
+    border: none;
+} */
+.search-icon{
+    color: white;
+}
 .products{
     background-color: var(--main-col);
     position: relative;
@@ -355,7 +364,4 @@ body {
     }
 }
 @media screen and (min-width: 90em){
-        body{
-            /* background-image: linear-gradient(blue, black); */
-        }
 }
