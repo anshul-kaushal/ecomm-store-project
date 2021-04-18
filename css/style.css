@@ -382,7 +382,8 @@ body {
     grid-column: span 3;
     height: auto;
     width: auto;
-    max-height: 72vh;
+    /* max-height: 72vh; */
+    max-height: auto;
     max-width: 87vw;
     display: block;
     justify-self: center;
@@ -391,7 +392,8 @@ body {
 .additional-images{
     height: auto;
     width: auto;
-    max-height: 24vh;
+    /* max-height: 24vh; */
+    max-height: auto;
     max-width: 29vw;
     display: inline;
     border: 3px solid var(--secondary-on);
@@ -406,6 +408,13 @@ body {
 }
 .grid-item-4{
     grid-column: 3 / 4;
+}
+.smart-wallet-description{
+    margin-bottom: 1em;
+    border: 1px solid var(--secondary-on);
+    background-color: var(--main-col-alt);
+    margin-top: 0.75em;
+    padding: 0.5em;
 }
 .smart-wallet-description p{
     padding: 0;
@@ -422,12 +431,15 @@ body {
     display: block;
     text-align: center;
     font-size: 6vw;
-    margin-top: 1em;
+    margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
 .other-details{
     border: 1px solid black;
     display: flex;
+    height: auto;
+    width: auto;
+    margin-top: 1.5em;
 }
 .wallet-price-and-rating{
     /* border: 1px solid black; */
@@ -437,7 +449,7 @@ body {
 }
 .wallet-price{
     align-self: flex-start;
-    font-size:6vw;
+    font-size:5vw;
     font-weight: bold;
 }
 .wallet-rating{
@@ -454,13 +466,14 @@ body {
 .buy-button{
     background-color: var(--tertiary-col);
     border:none;
-    /* border-radius: 1rem; */
     color: var(--main-col);
-    padding: 0.25em 4em;
-    text-align: center;
-    text-decoration: none;
+    padding: 0.25em 5em;
+    /* text-align: center; */
+    /* text-decoration: none; */
     display: inline-block;
-    font-size: 4vw;
+    font-family: var(--font-heading);
+    font-size: 2.5vw;
+    line-height: 1vh;
     margin: 4px 2px;
     cursor: pointer;
     text-transform: uppercase;
@@ -495,10 +508,12 @@ body {
 .dropbtn {
     background-color: #4B056E;
     color: var(--main-col);
-    padding: 0.25em 28vw;
-    font-size: 5vw;
+    padding: 1em 28vw;
+    font-size: 2.5vw;
     border: none;
     cursor: pointer;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
   }
   
   .dropdown {
@@ -530,7 +545,7 @@ body {
     border: 1px solid #3A0454;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover {background-color: var(--main-col-alt)}
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -554,6 +569,122 @@ body {
   tr:nth-child(even) {
     background-color: var(--main-col-alt);
   }
-  .other-details{
-      margin-top: 1.5em;
+  @media screen and (min-width: 40em){
+      .wallet-price-and-rating{
+          justify-content: space-between;
+      }
+      .wallet-price{
+          font-size: 4.5vw;
+      }
+      .wallet-rating{
+          font-size: 4vw;
+      }
+      .add-to-cart-button, .favorite-button{
+          font-size: 3.75vw;
+      }
+  }
+  @media screen and (min-width: 62em){
+      .single-product{
+          display: grid;
+          grid-template-columns: auto auto;
+          padding: 7.5em;
+          align-items: center;
+          /* grid-auto-rows: fit-content(1em); */
+          /* margin-bottom: auto; */
+      }
+      .product-name{
+          order: 2;
+          grid-column: 2 / 3;
+          min-width: 0;
+          min-height: 0;
+          align-self: start;
+          margin: 0;
+      }
+      .wallet-grouped-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          order: 1;
+          grid-row: span 2;
+          grid-column: 1 / 2;
+      }
+      .smart-wallet-images{
+          /* border: 10px solid purple; */
+          max-width: 45vw;
+          max-height: auto;
+          /* order:1; */
+      }
+      .main-image{
+          max-width: 45vw;
+          max-height: auto;
+      }
+      .additional-images{
+          max-width: 15vw;
+          max-height: auto;
+      }
+      .wallet-price-and-rating, .action-buttons, .dropdown-container{
+          max-height: 15vh;
+          max-width: 45vw;
+      }
+      .wallet-price-and-rating{
+          /* border: 1px solid purple; */
+      }
+      .wallet-price{
+          font-size: 3.5vw;
+      }
+      .wallet-rating{
+          font-size: 3vw;
+      }
+      .favorite-button, .add-to-cart-button{
+          font-size: 3vw;
+      }
+      .buy-button{
+          font-size: 2vw;
+      }
+      .dropdown, .dropbtn{
+          max-width: 40vw;
+      }
+      .dropbtn{
+          padding: 1em 15vw;
+          font-size: 1.75vw;
+      }
+      .dropdown-content{
+          max-width: 40vw;
+      }
+      .other-details{
+          order: 3;
+          display: inline-block;
+          margin: 0;
+      }
+      .other-details table{
+        font-size: 1.5vw;
+      }
+      .smart-wallet-description{
+          order: 4;
+          grid-column: span 2;
+          margin-top: 2em;
+      }
+  }
+  @media screen and (min-width: 90em){
+    .wallet-price{
+        font-size: 3vw;
+    }
+    .wallet-rating{
+        font-size: 2.5vw;
+    }
+    .favorite-button, .add-to-cart-button{
+        font-size: 2.5vw;
+    }
+    .buy-button{
+        font-size: 1.5vw;
+    }
+    .dropbtn{
+        font-size: 1.25vw;
+    }
+    .smart-wallet-description h2{
+        font-size: 3vw;
+    }
+    .other-details table{
+        font-size: 1.75vw;
+      }
   }
