@@ -137,16 +137,33 @@ body {
 .search{
     justify-self: flex-start;
     padding-bottom: 0.5em;
+    /* width: auto;
+    height: auto;
+    max-height: 5vh;
+    max-width: 5vw; */
 }
+input[type=search] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--bg-col);
+    border-radius: 2em;
+    font-size: 1em;
+    background-color: var(--main-col);
+    background-image: url('../img/search-icon.svg');
+    background-size: 4vw;
+    background-position: 1.5vw 1.5vh; 
+    background-repeat: no-repeat;
+    padding: 0.75em 2em 0.75em 2.5em;
+  }
 /* button, input{
     font-family: inherit;
     background: none;
     outline: none;
     border: none;
 } */
-.search-icon{
+/* .search-icon{
     color: white;
-}
+} */
 .products{
     background-color: var(--main-col);
     position: relative;
@@ -171,11 +188,42 @@ body {
     display: inline-block;
     font-size: 7vw;
 }
+.product-images-container{
+    position: relative;
+}
 .product-images{
     border: 1px solid var(--secondary-on);
     height: 100%;
     width: 100%;
     display: block;
+}
+.cart-and-favorite{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    /* right: 10%; */
+    /* border: 1px solid pink; */
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.index-favorite-button, .index-add-to-cart-button{
+    background-color: var(--main-col);
+    border: 1px solid var(--secondary-on);
+    color: var(--main-col);
+    color: var(--secondary-on);
+    font-size: 6vw;
+    text-align: center;
+    padding: 0.75em 0.75em;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.product-images-container:hover .product-images{
+    opacity: 0.3;
+}
+.product-images-container:hover .cart-and-favorite{
+    opacity: 1;
 }
 .price-and-rating{
     width: 100%;
@@ -224,8 +272,8 @@ body {
     display: inline;
 }
 .page-footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     /* border: 1px solid white; */
 }
@@ -236,6 +284,7 @@ body {
 .footer-nav{
     align-self: center;
     /* border: 1px solid white; */
+    width: 100%;
     /* justify-self: center; */
     display: flex;
     justify-content: center;
@@ -243,31 +292,42 @@ body {
 }
 .legal{
     padding: 0;
-    padding-top: 0.3em;
+    /* padding-top: 0.3em; */
     align-self: center;
     justify-self: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
     /* border: 1px solid white; */
 }
 .social, .legal{
     list-style: none;
+    padding-inline-start: 0;
     /* text-decoration: none; */
     /* color: var(--primary-on); */
 }
 .social li{
-    padding: 0.5em 0 0.5em 0;
+    /* padding: 0.5em 0 0.5em 0; */
+    font-size: 4.5vw;
+    display: inline;
+    padding: 0 0.5em 0 0.5em;
 }
 .legal li{
-    padding: 0.75em 0 0.75em 0;
+    display: inline;
+    padding: 0;
+    font-size: 3vw;
+    align-self: center;
 }
 .social li a, .legal li a{
+    text-align: center;
     text-decoration: none;
     color: var(--primary-on);
 }
 .copyright{
     color: var(--primary-on);
-    grid-column: span 2;
     justify-self: center;
-    /* border: 1px solid white; */
+    text-align: center;
+    font-size: 3.5vw;
 }
 @media screen and (min-width: 40em){
     body{
@@ -297,9 +357,34 @@ body {
         max-width: 60vw;
         max-height: 60vh;
     }
+    .index-add-to-cart-button, .index-favorite-button{
+        font-size: 3.75vw;
+    }
     .product-text{
         font-size: 3vw;
     }
+    .copyright{
+        font-size: 3vw;
+    }
+    .legal li{
+        font-size: 2.5vw;
+    }
+    .social li{
+        font-size: 4vw;
+    }
+    input[type=search] {
+        /* width: 100%;
+        box-sizing: border-box;
+        border: 2px solid var(--bg-col);
+        border-radius: 2em;
+        font-size: 1em;
+        background-color: var(--main-col); */
+        background-image: url('../img/search-icon.svg');
+        background-size: 2vw;
+        background-position: 0.55em 0.75em; 
+        /* background-repeat: no-repeat; */
+        padding: 0.75em 2em 0.75em 2.25em;
+      }
 
 }
 @media screen and (min-width: 70em){
@@ -325,12 +410,22 @@ body {
         order: 1;
         font-size: 4vw;
     }
-    .product-images{
+    /* .product-images{
         grid-column: 1 / 2;
         order: 2;
         max-width: 40vw;
         max-height: 40vw;
         /* align-self: center; */
+    /* } */
+    .product-images-container{
+        grid-column: 1 / 2;
+        order: 2;
+        /* max-width: 40vw;
+        max-height: 40vw; */
+    }
+    .product-images{
+        max-width: 40vw;
+        max-height: 40vw;
     }
     .price-and-rating{
         /* border: 5px solid black; */
@@ -366,8 +461,39 @@ body {
         order: 5;
         margin-top: 2em;
     }
+    .index-add-to-cart-button, .index-favorite-button{
+        font-size: 3.5vw;
+    }
+    .copyright{
+        font-size: 2vw;
+    }
+    .legal li{
+        font-size: 2vw;
+    }
+    .social li{
+        font-size: 3.5vw;
+    }
+    input[type=search] {
+        /* width: 100%;
+        box-sizing: border-box;
+        border: 2px solid var(--bg-col);
+        border-radius: 2em;
+        font-size: 1em;
+        background-color: var(--main-col); */
+        background-image: url('../img/search-icon.svg');
+        background-size: 1.5vw;
+        background-position: 0.55em 0.75em; 
+        /* background-repeat: no-repeat; */
+        padding: 0.75em 2em 0.75em 2.25em;
+      }
 }
 @media screen and (min-width: 90em){
+    .index-add-to-cart-button, .index-favorite-button{
+        font-size: 3.25vw;
+    }
+    .copyright{
+        font-size: 1.5vw;
+    }
 }
 
 /* Styling for product.html */
@@ -415,6 +541,7 @@ body {
     background-color: var(--main-col-alt);
     margin-top: 0.75em;
     padding: 0.5em;
+    /* padding-bottom: 1em; */
 }
 .smart-wallet-description p{
     padding: 0;
@@ -582,6 +709,9 @@ body {
       .add-to-cart-button, .favorite-button{
           font-size: 3.75vw;
       }
+      .smart-wallet-description h2{
+          font-size: 4vw;
+      }
   }
   @media screen and (min-width: 62em){
       .single-product{
@@ -626,9 +756,6 @@ body {
           max-height: 15vh;
           max-width: 45vw;
       }
-      .wallet-price-and-rating{
-          /* border: 1px solid purple; */
-      }
       .wallet-price{
           font-size: 3.5vw;
       }
@@ -663,6 +790,9 @@ body {
           order: 4;
           grid-column: span 2;
           margin-top: 2em;
+      }
+      .smart-wallet-description h2{
+          font-size: 3.5vw;
       }
   }
   @media screen and (min-width: 90em){

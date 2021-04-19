@@ -17,16 +17,8 @@
         <div class = "logo">
       <a href="index.html"><img src="./img/logo.svg" alt="Logo for brand"></a>
     </div>
-      <!-- Navigation menu and toggle button (non-functional) -->
       <nav aria-label="Primary" class="navigation">
         <ul class="menu">
-          <!-- <li><a href="#">Shop</a>
-            <ul class="submenu">
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-            </ul>
-          </li> -->
           <li class = "hide"><a href="#">about</a></li>
           <li class = "hide"><a href="#">contact</a></li>
           <li class = "hide"><a href="#">services</a></li>
@@ -44,14 +36,14 @@
         <h1 class="heading">Products</h1>
       <div class="search">
       <form class="searchbox">
-        <label>Search
+        <!-- <label>Search -->
           <input type="search" name="find" id="find" placeholder="search">
           <!-- <img src="./img/search-bar.svg" alt=""> -->
-        </label>
+        <!-- </label> -->
         <!-- <button type="button"><span class="material-icons">search</span></button> -->
-        <button type="button">
+        <!-- <button type="button">
           
-          <i class="fas fa-search search-icon"></i></button>
+          <i class="fas fa-search search-icon"></i></button> -->
       </form>
       </div>
 
@@ -142,7 +134,17 @@
         <article class="product">
           <!-- <header> -->
             <h3 class="sub-heading">Journal</h3>
+            <div class="product-images-container">
             <img class="product-images" src="img/journal.jpg" alt="Product Image">
+            <div class="cart-and-favorite">
+              <button type="button" class="index-favorite-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button type="button" class="index-add-to-cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            </div>
+          </div>
             <div class="price-and-rating">
             <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
             <data class = "price" value="39">$39.00</data>
@@ -228,7 +230,17 @@
         <article class="product">
           <!-- <header> -->
             <h3 class="sub-heading">minimalist t-shirts</h3>
+            <div class="product-images-container">
             <img class="product-images" src="img/t-shirts.jpg" alt="Product Image">
+            <div class="cart-and-favorite">
+              <button type="button" class="index-favorite-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button type="button" class="index-add-to-cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            </div>
+            </div>
             <div class="price-and-rating">
             <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
             <data class = "price" value="39">$39.00</data>
@@ -313,7 +325,17 @@
         <article class="product">
           <!-- <header> -->
             <h3 class="sub-heading">studio headphones</h3>
+            <div class="product-images-container">
             <img class="product-images" src="img/headphones.jpg" alt="Product Image">
+            <div class="cart-and-favorite">
+              <button type="button" class="index-favorite-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button type="button" class="index-add-to-cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            </div>
+            </div>
             <div class="price-and-rating">
             <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
             <data class = "price" value="39">$39.00</data>
@@ -398,7 +420,17 @@
         <article class="product">
           <!-- <header> -->
             <h3 class="sub-heading">smart wallet</h3>
+            <div class="product-images-container">
             <img class="product-images" src="img/wallet.jpg" alt="Product Image">
+            <div class="cart-and-favorite">
+              <button type="button" class="index-favorite-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button type="button" class="index-add-to-cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            </div>
+            </div>
             <div class="price-and-rating">
             <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
             <data class = "price" value="39">$39.00</data>
@@ -483,7 +515,17 @@
         <article class="product">
           <!-- <header> -->
             <h3 class="sub-heading">smart wrist-band</h3>
+            <div class="product-images-container">
             <img class="product-images" src="img/band.jpg" alt="Product Image">
+            <div class="cart-and-favorite">
+              <button type="button" class="index-favorite-button">
+                <i class="far fa-heart"></i>
+            </button>
+            <button type="button" class="index-add-to-cart-button">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            </div>
+            </div>
             <div class="price-and-rating">
             <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
             <data class = "price" value="39">$39.00</data>
@@ -581,9 +623,9 @@
 
     <footer class="page-footer">
       <ul class="social">
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
       </ul>
       <nav aria-label="Legal" class="footer-nav">
         <ul class="legal">
