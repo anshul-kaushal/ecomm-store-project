@@ -104,6 +104,9 @@ body {
     align-self: center;
     font-family: var(--font-heading);
 }
+.searchbox label{
+    display: none;
+}
 .search{
     justify-self: flex-start;
     padding-bottom: 0.5em;

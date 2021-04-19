@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +14,7 @@
     <header class="page-header">
         <div class = "upper-bar">
           <div class = "logo">
-        <a href="index.html"><img src="./img/logo.svg" alt="Logo for brand"></a>
+        <a href="index.html"><img src="./img/logo.svg" alt="Logo for brand: Anshul Kaushal"></a>
       </div>
         <nav aria-label="Primary" class="navigation">
           <ul class="menu">
@@ -34,12 +35,14 @@
           <h1 class="heading">Products</h1>
         <div class="search">
         <form class="searchbox">
+          <!-- <label for="search-products">Search products </label>  -->
             <input type="search" name="find" id="find" placeholder="search">
             <!-- <img src="./img/search-bar.svg" alt=""> -->
           <!-- <button type="button"><span class="material-icons">search</span></button> -->
           <!-- <button type="button">
-            
+           
             <i class="fas fa-search search-icon"></i></button> -->
+         
         </form>
         </div>
       </div>
@@ -62,17 +65,17 @@
           </div>
         </div>
         <div class="action-buttons">
-            <button type="button" class="favorite-button">
+            <button type="button" class="favorite-button" aria-label="add product to favourite">
                 <i class="far fa-heart"></i>
             </button>
-            <button type="button" class="buy-button">Buy</button>
-            <button type="button" class="add-to-cart-button">
+            <button type="button" class="buy-button" aria-label="buy the product">Buy</button>
+            <button type="button" class="add-to-cart-button" aria-label="add the product to cart">
                 <i class="fas fa-shopping-cart"></i>
             </button>
           </div>
           <div class="dropdown-container">
           <div class="dropdown">
-            <button class="dropbtn">Colors</button>
+            <button class="dropbtn" aria-label="open dropdown for color options">Colors</button>
             <div class="dropdown-content">
             <a href="#">Grey and Green</a>
             <a href="#">Brown and Blue</a>
