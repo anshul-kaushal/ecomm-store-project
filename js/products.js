@@ -147,17 +147,21 @@ const products = [productOne, productTwo, productThree, productFour, productFive
 // associating main class with variable productsTable
 const productsTable = document.querySelector(`#products`);
 
-products.forEach((product) => {
-    const productArticle = document.createElement('article');
-    productArticle.classList.add('product');
+const outputFilteredList = function(filteredProductsArray) {
+    productsTable.innerHTML = ``;
 
-    // introduced dynamic star rating to the code
-    let starRatingString = '';
-    for(i=1; i<=Math.floor(product.rating); i++){
-        starRatingString += `<span class="fas fa-star">`
-    }
-    if(product.rating % 1 != 0){
-        starRatingString += `<span class="fas fa-star-half"></span>`
+
+    filteredProductsArray.forEach((product) => {
+        const productArticle = document.createElement('article');
+        productArticle.classList.add('product');
+
+        // introduced dynamic star rating to the code
+        let starRatingString = '';
+        for(i=1; i<=Math.floor(product.rating); i++){
+            starRatingString += `<span class="fas fa-star">`
+        }
+        if(product.rating % 1 != 0){
+            starRatingString += `<span class="fas fa-star-half"></span>`
     }
 
     // for cases when discounted price == null
@@ -203,3 +207,45 @@ products.forEach((product) => {
     // adding the productArticle to the productsTable element
     productsTable.appendChild(productArticle);
 })
+}
+
+const filterRating = document.querySelector("#filter-rating");
+const filterSearch = document.querySelector("#find");
+const filterButton = document.querySelector("#add-filter-button");
+
+const filter = {
+    searchProduct: '',
+    starRating: 0,
+}
+
+const filterProduct = function(){
+    let filteredProducts = products.filter(function(product) {
+        return (product.rating >= filter.starRating) && (product.name.toUpperCase().includes(filter.searchProduct));
+    })
+
+    outputFilteredList(filteredProducts);
+}
+
+filterRating.addEventListener('change', function(event) {
+    const rating = event.target;
+    const output = document.querySelector(`output[for="filterRating"]`);
+    output.textContent = rating.value;
+
+    // filter.starRating = Number(rating.value);
+
+    // filterProduct()
+})
+
+// filterSearch.addEventListener('input', function(event) {
+//     filter.searchProduct = event.target.value.toUpperCase();
+
+//     filterProduct()
+// })
+filterButton.addEventListener('click', function(event) {
+    filter.starRating = Number(filterRating.value);
+    filter.searchProduct = filterSearch.value.toUpperCase();
+
+    filterProduct();
+})
+
+outputFilteredList(products);

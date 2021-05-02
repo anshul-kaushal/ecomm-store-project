@@ -133,14 +133,43 @@ input[type=search] {
     border: 1px solid var(--secondary-on);
     border-bottom: 1px solid var(--primary-on);
 }
+input[type=range] {
+    /* height: 38px; */
+    -webkit-appearance: none;
+    /* margin: 10px 0; */
+    height: 0.5em;
+    width: 30%;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px var(--bg-col);
+    background: var(--bg-col-two);
+    border-radius: 0.75em;
+    /* border: 1px solid #000000; */
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1.5em;
+    background: var(--bg-col-alt);
+    cursor: pointer;
+    -webkit-appearance: none;
+    /* margin-top: -11px; */
+    margin-top: -6px;
+  }
 .filter{
     text-align: center;
 }
 .filter-button{
-    height: auto;
     width: auto;
-    max-width: 50vw;
-    max-height: 50vh;
+    height: auto;
+    max-width: 30vw;
+    max-height: 30vh;
 }
 .product{
     display: flex;
@@ -316,6 +345,10 @@ ins{
         width: auto;
         max-width: 60vw;
         max-height: 60vh;
+    }
+    .filter-button{
+        max-width: 32vw;
+        max-height: 32vh;
     }
     .index-add-to-cart-button, .index-favorite-button{
         font-size: 3.75vw;
