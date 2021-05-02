@@ -133,6 +133,15 @@ input[type=search] {
     border: 1px solid var(--secondary-on);
     border-bottom: 1px solid var(--primary-on);
 }
+.filter{
+    text-align: center;
+}
+.filter-button{
+    height: auto;
+    width: auto;
+    max-width: 50vw;
+    max-height: 50vh;
+}
 .product{
     display: flex;
     flex-direction: column;
