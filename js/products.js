@@ -140,4 +140,67 @@ const productTen = {
     }
 }
 
-const products = [productOne, productTwo, productThree, productFour, productFive, productFive, productSix, productSeven, productEight, productNine, productTen];
+// array of products
+const products = [productOne, productTwo, productThree, productFour, productFive, productSix, productSeven, productEight, productNine, productTen];
+
+// adding product details dynamically
+// associating main class with variable productsTable
+const productsTable = document.querySelector(`#products`);
+
+products.forEach((product) => {
+    const productArticle = document.createElement('article');
+    productArticle.classList.add('product');
+
+    // let ratingStarLength;
+
+    // if (product.rating % 1 == 0){
+    //     let ratingStarLength = product.rating;
+    // }
+    // else{
+    //     ratingStarLength = Math.floor(product.rating);
+    // }
+    let starRatingString = '';
+    for(i=1; i<=Math.floor(product.rating); i++){
+        starRatingString += `<span class="fas fa-star">`
+    }
+    if(product.rating % 1 != 0){
+        starRatingString += `<span class="fas fa-star-half"></span>`
+    }
+
+    console.log(starRatingString);
+
+    productArticle.innerHTML = `
+    <h2 class="sub-heading">${product.name}</h2>
+    <div class="product-images-container">
+    <img class="product-images" src=${product.img.src} alt=${product.img.alt}>
+    <div class="cart-and-favorite">
+      <button type="button" class="index-favorite-button" aria-label="add product to favorites">
+        <i class="far fa-heart"></i>
+    </button>
+    <button type="button" class="index-add-to-cart-button" aria-label="add 
+    product to cart">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
+    </div>
+    </div>
+    <div class="price-and-rating">
+    <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
+    <data class = "price" value="39"><del>$${product.priceInCAD.original}</del> <ins>$${product.priceInCAD.discounted}</ins></data>
+    <div class="rating">
+      ${starRatingString}
+    </div>
+    </div>
+    <p class="product-text" lang="zxx">${product.description}
+    </p>
+    <div class="learn-more">
+    <a href="product.html">
+        <img class="learn-more-button" src="./img/learn-more.svg" alt="button to open the product description page">
+        <img class="learn-more-button-hover" src="./img/learn-more-hover.svg" alt="button to open the product description page">
+    </a>
+    </div>
+    `
+
+    productsTable.appendChild(productArticle);
+})
+
+{/* <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span> */}

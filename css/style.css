@@ -278,6 +278,9 @@ input[type=search] {
     text-align: center;
     font-size: 3.5vw;
 }
+ins{
+    text-decoration: none;
+}
 @media screen and (min-width: 40em){
     body{
         padding: var(--pad-and-gap);
