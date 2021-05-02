@@ -6,6 +6,10 @@ const productOne = {
     },
     rating: 4,
     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis exercitationem facilis voluptates labore doloremque molestiae maiores, itaque repellat, harum, excepturi cupiditate voluptas maxime. Quam excepturi aliquam dolore quidem voluptatibus? Officia.',
+    img: {
+        src: 'img/journal.jpg',
+        alt: 'image of a journal'
+    }
 }
 
 const productTwo = {
@@ -16,6 +20,10 @@ const productTwo = {
     },
     rating: 4.5,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
+    img: {
+        src: 'img/wallet.jpg',
+        alt: 'image of wallet'
+    }
 }
 
 const productThree = {
@@ -26,6 +34,10 @@ const productThree = {
     },
     rating: 5,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates, harum, libero est quia ipsam blanditiis in eaque recusandae nesciunt tempore. Tenetur, veritatis! Nesciunt inventore optio numquam harum quia possimus.',
+    img: {
+        src: 'img/t-shirts.jpg',
+        alt: 'image of t-shirts'
+    }
 }
 
 const productFour = {
@@ -36,6 +48,10 @@ const productFour = {
     },
     rating: 5,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates, harum, libero est quia ipsam blanditiis in eaque recusandae nesciunt tempore. Tenetur, veritatis! Nesciunt inventore optio numquam harum quia possimus.',
+    img: {
+        src: 'img/band.jpg',
+        alt: 'image of a band',
+    }
 }
 
 const productFive = {
@@ -46,6 +62,10 @@ const productFive = {
     },
     rating: 3.5,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates, harum, libero est quia ipsam blanditiis in eaque recusandae nesciunt tempore. Tenetur, veritatis! Nesciunt inventore optio numquam harum quia possimus.',
+    img: {
+        src: 'img/',
+        alt: 'image of a pen',
+    }
 }
 
 const productSix = {
@@ -56,6 +76,10 @@ const productSix = {
     },
     rating: 4,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
+    img: {
+        src: 'img/',
+        alt: 'image of a pocket watch',
+    }
 }
 
 const productSeven = {
@@ -66,6 +90,10 @@ const productSeven = {
     },
     rating: 4,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
+    img: {
+        src: 'img/',
+        alt: 'image of wayfarer sunglasses',
+    }
 }
 
 const productEight = {
@@ -76,6 +104,10 @@ const productEight = {
     },
     rating: 5,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
+    img: {
+        src: 'img/headphones.jpg',
+        alt: 'image of headphones',
+    }
 }
 
 const productNine = {
@@ -86,6 +118,10 @@ const productNine = {
     },
     rating: 4.5,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
+    img: {
+        src: 'img/',
+        alt: '',
+    }
 }
 
 const productTen = {
@@ -96,6 +132,10 @@ const productTen = {
     },
     rating: 4.5,
     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis exercitationem facilis voluptates labore doloremque molestiae maiores, itaque repellat, harum, excepturi cupiditate voluptas maxime. Quam excepturi aliquam dolore quidem voluptatibus? Officia.',
+    img: {
+        src: 'img/',
+        alt: '',
+    }
 }
 
 const products = [productOne, productTwo, productThree, productFour, productFive, productFive, productSix, productSeven, productEight, productNine, productTen];
