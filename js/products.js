@@ -1,3 +1,5 @@
+// product objects
+
 const productOne = {
     name: 'journal',
     priceInCAD: {
@@ -63,7 +65,7 @@ const productFive = {
     rating: 3.5,
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates, harum, libero est quia ipsam blanditiis in eaque recusandae nesciunt tempore. Tenetur, veritatis! Nesciunt inventore optio numquam harum quia possimus.',
     img: {
-        src: 'img/',
+        src: 'img/pen.jpg',
         alt: 'image of a pen',
     }
 }
@@ -77,7 +79,7 @@ const productSix = {
     rating: 4,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
     img: {
-        src: 'img/',
+        src: 'img/pocket-watch.jpg',
         alt: 'image of a pocket watch',
     }
 }
@@ -91,7 +93,7 @@ const productSeven = {
     rating: 4,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
     img: {
-        src: 'img/',
+        src: 'img/wayfarers.jpg',
         alt: 'image of wayfarer sunglasses',
     }
 }
@@ -119,22 +121,22 @@ const productNine = {
     rating: 4.5,
     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea iusto distinctio, perferendis repudiandae ab animi tempore consequatur illum deserunt exercitationem similique repellat eaque, aliquid corrupti provident, blanditiis quaerat expedita doloremque!',
     img: {
-        src: 'img/',
-        alt: '',
+        src: 'img/backpack.jpg',
+        alt: 'image of a backpack',
     }
 }
 
 const productTen = {
-    name: 'laptop sleeve',
+    name: 'minimalist mug',
     priceInCAD: {
-        original: 20,
-        discounted: 15,
+        original: 7,
+        discounted: 6,
     },
     rating: 4.5,
     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis exercitationem facilis voluptates labore doloremque molestiae maiores, itaque repellat, harum, excepturi cupiditate voluptas maxime. Quam excepturi aliquam dolore quidem voluptatibus? Officia.',
     img: {
-        src: 'img/',
-        alt: '',
+        src: 'img/mug.jpg',
+        alt: 'image of a mug',
     }
 }
 
