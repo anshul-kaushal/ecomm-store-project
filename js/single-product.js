@@ -10,3 +10,9 @@ function switchImage(event) {
         document.getElementById('main-image').setAttribute(`src`, imageSelectedSource);
 }
 }
+
+// toggle menu
+const menu = document.getElementById('menu')
+menu.addEventListener('click', function(event){
+    document.getElementById('menu-dropdown').classList.toggle('show')
+})

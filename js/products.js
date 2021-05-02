@@ -229,7 +229,7 @@ const filterProduct = function(){
 filterRating.addEventListener('change', function(event) {
     const rating = event.target;
     const output = document.querySelector(`output[for="filterRating"]`);
-    output.textContent = rating.value;
+    output.textContent = `Minimum Rating: ${rating.value}`;
 
     // filter.starRating = Number(rating.value);
 
@@ -249,3 +249,9 @@ filterButton.addEventListener('click', function(event) {
 })
 
 outputFilteredList(products);
+
+// toggle menu
+const menu = document.getElementById('menu')
+menu.addEventListener('click', function(event){
+    document.getElementById('menu-dropdown').classList.toggle('show')
+})
