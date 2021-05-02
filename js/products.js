@@ -151,14 +151,7 @@ products.forEach((product) => {
     const productArticle = document.createElement('article');
     productArticle.classList.add('product');
 
-    // let ratingStarLength;
-
-    // if (product.rating % 1 == 0){
-    //     let ratingStarLength = product.rating;
-    // }
-    // else{
-    //     ratingStarLength = Math.floor(product.rating);
-    // }
+    // introduced dynamic star rating to the code
     let starRatingString = '';
     for(i=1; i<=Math.floor(product.rating); i++){
         starRatingString += `<span class="fas fa-star">`
@@ -167,8 +160,16 @@ products.forEach((product) => {
         starRatingString += `<span class="fas fa-star-half"></span>`
     }
 
-    console.log(starRatingString);
+    // for cases when discounted price == null
+    let priceString = '';
+    if(product.priceInCAD.discounted == null){
+        priceString = `<data class = "price" value="${product.priceInCAD.original}">$${product.priceInCAD.original}</data>`;
+    }
+    else{
+        priceString = `<data class = "price" value="${product.priceInCAD.discounted}"><del>$${product.priceInCAD.original}</del> <ins>$${product.priceInCAD.discounted}</ins></data>`;
+    }
 
+    // adding dynamic html to productArticle
     productArticle.innerHTML = `
     <h2 class="sub-heading">${product.name}</h2>
     <div class="product-images-container">
@@ -185,7 +186,7 @@ products.forEach((product) => {
     </div>
     <div class="price-and-rating">
     <!-- <data class = "price" value="39"><del>$50.00</del> <ins>$39.00</ins></data> -->
-    <data class = "price" value="39"><del>$${product.priceInCAD.original}</del> <ins>$${product.priceInCAD.discounted}</ins></data>
+    ${priceString}
     <div class="rating">
       ${starRatingString}
     </div>
@@ -199,8 +200,6 @@ products.forEach((product) => {
     </a>
     </div>
     `
-
+    // adding the productArticle to the productsTable element
     productsTable.appendChild(productArticle);
 })
-
-{/* <span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span><span class="fas fa-star"></span> */}
