@@ -73,6 +73,7 @@ body {
 }
 .menu-dots-item{
     display: inline-block;
+    cursor: pointer;
 }
 .menu-dropdown-content{
     display: flex;
