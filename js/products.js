@@ -209,6 +209,7 @@ const outputFilteredList = function(filteredProductsArray) {
 })
 }
 
+// adding search and minimum rating filters
 const filterRating = document.querySelector("#filter-rating");
 const filterSearch = document.querySelector("#find");
 const filterButton = document.querySelector("#add-filter-button");
@@ -218,6 +219,7 @@ const filter = {
     starRating: 0,
 }
 
+// filters the products array based on search input and ratings slider
 const filterProduct = function(){
     let filteredProducts = products.filter(function(product) {
         return (product.rating >= filter.starRating) && (product.name.toUpperCase().includes(filter.searchProduct));
@@ -226,21 +228,15 @@ const filterProduct = function(){
     outputFilteredList(filteredProducts);
 }
 
+// provides the value for minimum rating on event: change
 filterRating.addEventListener('change', function(event) {
     const rating = event.target;
     const output = document.querySelector(`output[for="filterRating"]`);
     output.textContent = `Minimum Rating: ${rating.value}`;
 
-    // filter.starRating = Number(rating.value);
-
-    // filterProduct()
 })
 
-// filterSearch.addEventListener('input', function(event) {
-//     filter.searchProduct = event.target.value.toUpperCase();
-
-//     filterProduct()
-// })
+// when clicked, the button transforms the filter object and calls the filterProduct() function
 filterButton.addEventListener('click', function(event) {
     filter.starRating = Number(filterRating.value);
     filter.searchProduct = filterSearch.value.toUpperCase();
@@ -248,10 +244,11 @@ filterButton.addEventListener('click', function(event) {
     filterProduct();
 })
 
+//when page is newly loaded and filter object is default, it loads the entire products array
 outputFilteredList(products);
 
 // toggle menu
-// const menu = document.getElementById('menu')
-// menu.addEventListener('click', function(event){
-//     document.getElementById('menu-dropdown').classList.toggle('show')
-// })
+const menu = document.getElementById('menu')
+menu.addEventListener('click', function(event){
+    document.getElementById('menu-dropdown').classList.toggle('show');
+})
