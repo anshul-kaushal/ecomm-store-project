@@ -209,6 +209,7 @@ const outputFilteredList = function(filteredProductsArray) {
 })
 }
 
+// for filtering the products using search and ratings slider
 const filterRating = document.querySelector("#filter-rating");
 const filterSearch = document.querySelector("#find");
 const filterButton = document.querySelector("#add-filter-button");
@@ -218,6 +219,7 @@ const filter = {
     starRating: 0,
 }
 
+//function defined to filter the products array
 const filterProduct = function(){
     let filteredProducts = products.filter(function(product) {
         return (product.rating >= filter.starRating) && (product.name.toUpperCase().includes(filter.searchProduct));
@@ -226,21 +228,15 @@ const filterProduct = function(){
     outputFilteredList(filteredProducts);
 }
 
+// function to update the minimum ratings value of the slider
 filterRating.addEventListener('change', function(event) {
     const rating = event.target;
     const output = document.querySelector(`output[for="filterRating"]`);
     output.textContent = `Minimum Rating: ${rating.value}`;
 
-    // filter.starRating = Number(rating.value);
-
-    // filterProduct()
 })
 
-// filterSearch.addEventListener('input', function(event) {
-//     filter.searchProduct = event.target.value.toUpperCase();
-
-//     filterProduct()
-// })
+//function to add filter to the products list once the add-filter button is clicked
 filterButton.addEventListener('click', function(event) {
     filter.starRating = Number(filterRating.value);
     filter.searchProduct = filterSearch.value.toUpperCase();
@@ -248,6 +244,7 @@ filterButton.addEventListener('click', function(event) {
     filterProduct();
 })
 
+// calling the function when page is loaded and no filter is selected with the entire product list
 outputFilteredList(products);
 
 // toggle menu
