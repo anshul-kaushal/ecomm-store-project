@@ -4,7 +4,7 @@
 *, *::before, *::after {
 	box-sizing: inherit;
 }
-html {
+:root {
     box-sizing: border-box;
 	--bg-col: #E0178E;    
 	--bg-col-alt: #ED1898;   
@@ -504,6 +504,25 @@ ins{
     }
 }
 @media screen and (min-width: 90em){
+    .product-listing{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product{
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+    }
+    .price-and-rating{
+        order: 2;
+        align-self: center;
+        border: 1px solid black;
+        justify-content: space-around;
+    }
+    .product-text{
+        order: 3;
+        text-align: center;
+    }
     .index-add-to-cart-button, .index-favorite-button{
         font-size: 3.25vw;
     }
