@@ -123,7 +123,7 @@ body {
 }
 .heading{
     text-transform: uppercase;
-    font-size: 10vw;
+    font-size: 2.5em;
     align-self: center;
     font-family: var(--font-heading);
 }
@@ -152,7 +152,7 @@ input[type=search] {
 .products{
     background-color: var(--main-col);
     position: relative;
-    padding: 0.75em;
+    padding: 0.2em;
     width: 100%;
     border: 1px solid var(--secondary-on);
     border-bottom: 1px solid var(--primary-on);
@@ -198,7 +198,7 @@ input[type=range]::-webkit-slider-thumb {
     display: block;
     margin-top: 0.4em;
     margin-bottom: 0.8em;
-    font-size: 4vw;
+    font-size: 1em;
 } 
   
 .filter{
@@ -210,28 +210,37 @@ input[type=range]::-webkit-slider-thumb {
     max-width: 35vw;
     max-height: 35vh;
 }
+.product-listing{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
 .product{
     display: flex;
     flex-direction: column;
     justify-content: content;
     align-items: center;
-    border-bottom: 2px solid var(--secondary-on);
+    /* border-bottom: 2px solid var(--secondary-on); */
     padding: 0 0.5em 1em 0.5em;
+    margin-bottom: 1em;
+    background-color: var(--main-product-col);
+    /* border: 1px solid black; */
 }
 .sub-heading{
     font-family: var(--font-heading);
     color: var(--secondary-on);
     text-transform: uppercase;
     display: inline-block;
-    font-size: 7vw;
+    font-size: 1.25em;
 }
 .product-images-container{
     position: relative;
 }
 .product-images{
     border: 1px solid var(--secondary-on);
-    height: 100%;
-    width: 100%;
+    width: 16em;
+    height: 12em;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 .cart-and-favorite{
@@ -261,7 +270,7 @@ input[type=range]::-webkit-slider-thumb {
     opacity: 1;
 }
 .price-and-rating{
-    width: 100%;
+    width: 16em;
     margin: 0.75em 0 0 0;
     display: flex;
     flex-direction: row;
@@ -269,7 +278,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 .price{
     align-self:center;
-    font-size:4vw;
+    font-size:1em;
     font-weight: bold;
 }
 .rating{
@@ -277,10 +286,12 @@ input[type=range]::-webkit-slider-thumb {
     display: flex;
     justify-content: center;
     color: goldenrod;
-    font-size: 4vw;
+    font-size: 1em;
 }
 .product-text{
     text-align: center;
+    font-size: 0.9em;
+    line-height: 1.4em;
 }
 .learn-more{
     display: inline-block;
@@ -288,20 +299,24 @@ input[type=range]::-webkit-slider-thumb {
     justify-self: center;
 }
 .learn-more-button{
-    height: auto;
-    width: auto;
-    max-height: 24vh;
-    max-width: 24vw;
+    /* height: auto;
+    width: auto; */
+    height: 4em;
+    width: 10em;
+    /* max-height: 24vh;
+    max-width: 24vw; */
 }
 .learn-more-button-hover{
     display: none;
     position:absolute;
     top:0;
     left:0;
-    height: auto;
-    width: auto;
-    max-height: 24vh;
-    max-width: 24vw;
+    /* height: auto;
+    width: auto; */
+    height: 4em;
+    width: 10em;
+    /* max-height: 24vh;
+    max-width: 24vw; */
     z-index: 2;
 }
 .learn-more:hover .learn-more-button-hover{
@@ -334,14 +349,14 @@ input[type=range]::-webkit-slider-thumb {
     padding-inline-start: 0;
 }
 .social li{
-    font-size: 4.5vw;
+    font-size: 1em;
     display: inline;
     padding: 0 0.5em 0 0.5em;
 }
 .legal li{
     display: inline;
     padding: 0;
-    font-size: 3vw;
+    font-size: 0.7em;
     align-self: center;
 }
 .social li a, .legal li a{
@@ -353,7 +368,7 @@ input[type=range]::-webkit-slider-thumb {
     color: var(--primary-on);
     justify-self: center;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: 0.75em;
 }
 ins{
     text-decoration: none;
@@ -416,6 +431,9 @@ ins{
     .index-add-to-cart-button, .index-favorite-button{
         font-size: 3.75vw;
     }
+    .price-and-rating{
+        width: 28em;
+    }
     .price{
         font-size: 1.4em;
     }
@@ -436,13 +454,13 @@ ins{
         width: 11.25em;
     }
     .copyright{
-        font-size: 3vw;
+        font-size: 1.2em;
     }
     .legal li{
-        font-size: 2.5vw;
+        font-size: 1.2em;
     }
     .social li{
-        font-size: 4vw;
+        font-size: 1.5em;
     }
     /* input[type=search] {
         background-image: url('../img/search-icon.svg');
@@ -520,6 +538,7 @@ ins{
         order: 4;
         margin: 0;
         justify-content: space-between;
+        width: 30em;
     }
     .price{
         font-size: 1.3em;
@@ -544,17 +563,21 @@ ins{
         order: 5;
         margin-top: 2em;
     }
+    .learn-more-button, .learn-more-button-hover{
+        height: 5em;
+        width: 12.5em;
+    }
     .index-add-to-cart-button, .index-favorite-button{
         font-size: 3.5vw;
     }
     .copyright{
-        font-size: 2vw;
+        font-size: 1.5em;
     }
     .legal li{
-        font-size: 2vw;
+        font-size: 1.5em;
     }
     .social li{
-        font-size: 3.5vw;
+        font-size: 1.7em;
     }
     /* input[type=search] {
         background-image: url('../img/search-icon.svg');
@@ -596,6 +619,7 @@ ins{
         align-self: center;
         justify-content: space-around;
         margin-top: 0.5em;
+        width: 15em;
     }
     .price{
         font-size: 0.8em;
@@ -623,11 +647,21 @@ ins{
     .learn-more{
         margin-top: 1.15em;
     }
+    .learn-more-button, .learn-more-button-hover{
+        height: 3.2em;
+        width: 8em;
+    }
     .index-add-to-cart-button, .index-favorite-button{
         font-size: 1em;
     }
     .copyright{
-        font-size: 1.5vw;
+        font-size: 1.7em;
+    }
+    .legal li{
+        font-size: 1.7em;
+    }
+    .social li{
+        font-size: 1.9em;
     }
     .rating-slider{
         width: 20%;
@@ -656,6 +690,10 @@ ins{
     width: 100%;
     max-height: auto;
     max-width: 87vw;
+    /* height: auto;
+    width: 15em; */
+    /* object-fit: cover;
+    object-position: center; */
     display: block;
     justify-self: center;
     border: 3px solid var(--secondary-on);
@@ -665,6 +703,7 @@ ins{
     width: 100%;
     max-height: auto;
     max-width: 29vw;
+    /* width: 5em; */
     display: inline;
     border: 3px solid var(--secondary-on);
 }
@@ -687,8 +726,9 @@ ins{
 .smart-wallet-description p{
     padding: 0;
     margin: 0;
-    line-height: 1.5em;
+    line-height: 1.4em;
     text-align: justify;
+    font-size: 1em;
 }
 .product-name{
     display: block;
@@ -697,46 +737,55 @@ ins{
 .smart-wallet-description h2{
     display: block;
     text-align: center;
-    font-size: 6vw;
+    font-size: 1.1em;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
 .other-details{
-    border: 1px solid black;
     display: flex;
     height: auto;
     width: auto;
-    margin-top: 1.5em;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    /* margin-top: 1.5em; */
 }
 .wallet-price-and-rating{
-    margin-top: 0.75em;
+    text-align: center;
+    /* margin-top: 0.75em; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1em;
+    /* width: 15em; */
 }
 .wallet-price{
     align-self: flex-start;
-    font-size:5vw;
+    font-size:1em;
     font-weight: bold;
 }
 .wallet-rating{
     align-self: center;
     color: goldenrod;
-    font-size: 4.5vw;
+    font-size: 1em;
 }
 .action-buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 1em;
+    gap: 1em;
+    /* width: 15em; */
 }
 .buy-button{
     background-color: var(--tertiary-col);
     border:none;
     color: var(--main-col);
-    padding: 0.25em 5em;
+    /* padding: 0.25em 5em; */
     display: inline-block;
     font-family: var(--font-heading);
-    font-size: 2.5vw;
-    line-height: 1vh;
+    font-size: 0.75em;
+    line-height: 0;
+    width: 7em;
+    height: 2em;
     margin: 4px 2px;
     cursor: pointer;
     text-transform: uppercase;
@@ -751,9 +800,9 @@ ins{
     border: none;
     color: var(--main-col);
     color: #4B056E;
-    font-size: 5.5vw;
+    font-size: 1em;
     text-align: center;
-    padding: 0.75em 0.75em;
+    /* padding: 0.75em 0.75em; */
     border-radius: 100%;
     cursor: pointer;
 }
@@ -765,13 +814,14 @@ ins{
     text-align: center;
     height: auto;
     width: auto;
-    margin-top: 1em;
 }
 .dropbtn {
     background-color: #4B056E;
     color: var(--main-col);
-    padding: 1em 28vw;
-    font-size: 2.5vw;
+    /* padding: 1em 28vw; */
+    height: 100%;
+    width: 100%;
+    font-size: 0.75em;
     border: none;
     cursor: pointer;
     font-family: var(--font-heading);
@@ -781,10 +831,11 @@ ins{
   .dropdown {
     position: relative;
     display: inline-block;
-    height: auto;
-    width: auto;
+    height: 2em;
+    width: 15em;
     text-align: center;
-    border: 1px solid black;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
   
   .dropdown-content {
@@ -793,7 +844,7 @@ ins{
     width: 100%;
     background-color: var(--main-col);
     color: var(--secondary-on);
-    min-width: 10em;
+    /* min-width: 10em; */
     z-index: 1;
   }
   
@@ -818,6 +869,7 @@ ins{
     font-family: var(--font-para);
     border-collapse: collapse;
     width: 100%;
+    height: 100%;
   }
   
   td, th {
@@ -829,29 +881,39 @@ ins{
   tr:nth-child(even) {
     background-color: var(--main-col-alt);
   }
+
+  .all-products-button{
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
   @media screen and (min-width: 40em){
-      .wallet-price-and-rating{
-          justify-content: space-between;
-      }
       .wallet-price{
-          font-size: 4.5vw;
+          font-size: 1.5em;
+          gap: 1.5em;
+      }
+      .buy-button{
+          width: 9em;
+          height: 3em;
       }
       .wallet-rating{
-          font-size: 4vw;
+          font-size: 1.5em;
       }
       .add-to-cart-button, .favorite-button{
-          font-size: 3.75vw;
+          font-size: 1.5em;
       }
-      .smart-wallet-description h2{
-          font-size: 4vw;
-      }
+      /* .smart-wallet-description h2{
+          font-size: 2em;
+      } */
   }
   @media screen and (min-width: 62em){
       .single-product{
           display: grid;
           grid-template-columns: auto auto;
           padding: 7.5em;
+          padding-bottom: 0;
           align-items: center;
+          column-gap: 1.25em;
       }
       .product-name{
           order: 2;
@@ -881,28 +943,28 @@ ins{
           max-width: 15vw;
           max-height: auto;
       }
-      .wallet-price-and-rating, .action-buttons, .dropdown-container{
+      .wallet-price-and-rating, .action-buttons, .dropdown{
           max-height: 15vh;
           max-width: 45vw;
       }
       .wallet-price{
-          font-size: 30px;
+          font-size: 1.5em;
       }
       .wallet-rating{
-          font-size: 30px;
+          font-size: 1.5em;
       }
       .favorite-button, .add-to-cart-button{
-          font-size: 3vw;
+          font-size: 1.5em;
       }
       .buy-button{
-          font-size: 2vw;
+          font-size: 1em;
       }
       .dropdown, .dropbtn{
           max-width: 40vw;
       }
       .dropbtn{
-          padding: 1em 15vw;
-          font-size: 1.75vw;
+          /* padding: 1em 15vw; */
+          font-size: 1em;
       }
       .dropdown-content{
           max-width: 40vw;
@@ -911,9 +973,10 @@ ins{
           order: 3;
           display: inline-block;
           margin: 0;
+          align-self: flex-start;
       }
       .other-details table{
-        font-size: 1.6vw;
+        font-size: 1em;
         width: 100%;
       }
       .smart-wallet-description{
@@ -922,14 +985,14 @@ ins{
           margin-top: 2em;
       }
       .smart-wallet-description h2{
-          font-size: 3.5vw;
+          font-size: 1.5em;
       }
       .smart-wallet-description p{
-          font-size: 18px;
+          font-size: 1em;
       }
   }
   @media screen and (min-width: 90em){
-    .wallet-price{
+    /* .wallet-price{
         font-size: 3vw;
     }
     .wallet-rating{
@@ -944,13 +1007,19 @@ ins{
     .dropbtn{
         font-size: 1.25vw;
     }
+    .product-name{
+        font-size: 2.5em;
+    }
     .smart-wallet-description h2{
-        font-size: 3vw;
+        font-size: 2.2em;
     }
     .smart-wallet-description p{
-        font-size: 20px;
+        font-size: 1.2em;
     }
     .other-details table{
-        font-size: 1.75vw;
-      }
+        font-size: 1.2em;
+      } */
+    .product-name{
+        font-size: 2.5em;
+    }
   }
